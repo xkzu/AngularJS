@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Incluir bootstrap-->
+    <link rel="stylesheet" href="./css//bootstrap.min.css">
+    <!--Incluir angular-->
+    <script src="./js//lib//angular.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Evaluasión</h1>
+        <h4>Angular 101</h4>
+        <hr>
+        <p>
+            Nombre completo: {{ nombre }}
+            <br>
+            <input type="text" ng-model="nombre" class="form-control" placeholder="Ingrese su nombre">
+        </p>
+        <p>
+            Lugar de trabajo: {{ trabajo }}
+            <br>
+            <input type="text" ng-model="trabajo" class="form-control" placeholder="Ingrese lugar de trabajo">
+        </p>
+        <p>
+            Salario en dólares: {{ salario | currency: '$ '}}
+            <br>
+            <input type="text" ng-model="salario" class="form-control" placeholder="Ingrese el salario">
+        </p>
+        <p>
+            Nombre: {{ nombre | uppercase }}
+            <br> Lugar de trabajo: {{ trabajo | lowercase }}
+            <br> Con un salario de: {{ salario | currency: '$ '}}
+        </p>
+    </div>
+</body>
+
+</html>
